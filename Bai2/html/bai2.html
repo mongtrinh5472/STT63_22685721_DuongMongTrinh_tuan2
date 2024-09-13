@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 02</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+        }
+        #container{
+            width: 800px;
+            height: 40%;
+        }
+        #header{
+            width: 100%;
+            height: 10%;
+            border: 1px solid #9b9893;
+            background-color: #9b9893;
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+        #header img{
+            width: 100px;
+            height: 120px; 
+        }
+        #header ul li{
+            list-style-type: none;
+            color: white;
+            margin-left: 10px;
+            line-height: 3px;
+        }
+        #menu_n{
+            width: 100%;
+            height: 90%;
+            background-color: #b1aea9;
+        }
+        #menu_n a{
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            margin-left: 30px;
+        }
+        #menu_n a:nth-child(1){
+            color: black;
+        }
+        #content-center{
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+        #section{
+            width: 100%;
+            height: 90%;
+        }
+        #article{
+            width: 500px;
+            height: 200px;
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+        #article img{
+            width: 200px;
+            height: 80%;
+        }
+        #course{
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+        }
+        #course div{
+            margin: 10px;
+        }
+        #course h4{
+            color: #d43f57;
+            text-transform: none;
+        }
+        #aside{
+            width: 400px;
+            height: 100%;
+            border-left: 1px solid #d8d8d7;
+            margin-bottom: 10px;
+        }
+        #nav{
+            width: 70%;
+            height: auto;
+            margin-left: 10px;
+        }
+        #nav h2{
+            color: #d43f57;
+        }
+        #nav ul{
+            list-style-type: none;
+            margin-left: 10px;
+        }
+        #nav ul li{
+            border-bottom: 1px solid #9b9893;
+            line-height: 2;
+            color: #d43f57;
+        }
+        #nav2{
+            width: 70%;
+            height: auto;
+            margin-left: 10px;
+        }
+        #nav2 h2{
+            color: #d43f57;
+        }
+        #nav2 ul{
+            list-style-type: none;
+        }
+        #footer{
+            width: 100%;
+            height: 40px;
+            border: 1px solid #b1aea9;
+            background-color: #b1aea9;
+            font-family: Arial, sans-serif;
+        }
+        #footer p{
+            color: white;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <img src="../img/logo.png" alt="">
+            <ul>
+                <li>
+                    <h1>YOKO'S KITCHEN</h1>
+                </li>
+                <li>JAPANESE COOKING CLASSES</li>
+            </ul>
+        </div>
+        <div id="menu_n">
+            <a href="#home">home</a>
+            <a href="#classes">classes</a>
+            <a href="#catering">catering</a>
+            <a href="#about">about</a>
+            <a href="#contact">contact</a>
+        </div>
+        <div id="content-center">
+            <div id="section">
+                <div id="article">
+                    <div id="course">
+                        <div>
+                            <img src="../img/teriyaki.jpg" alt="Bok Choi">
+                            Bok Choi
+                        </div>
+                        <div>
+                            <h2>Japanese Vegetarian</h2>
+                            <h4>Five week course in London</h4>
+                            <p>A five week introduction to traditional Japanese vegetarian meals, teaching you a selection of rice and noodle dishes.</p>
+                        </div>
+                    </div>
+                    <div id="course">
+                        <div>
+                            <img src="../img/teriyaki.jpg" alt="Teriyaki Sauce">
+                            Teriyaki Sauce
+                        </div>
+                        <div>
+                            <h2>Sauces Masterclass</h2>
+                            <h4>One day workshop</h4>
+                            <p>An intensive one-day course looking at how to create the most delicious sauces for use in a range of Japanese cookery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="aside">
+                <div id="nav">
+                    <h2>Popular Recipes</h2>
+                    <ul>
+                        <li>
+                            Yakitori (grilled chicken)
+                        </li>
+                        <li>
+                            Tsukune (minced chicken patties)
+                        </li>
+                        <li>
+                            Okonomiyaki (savory pancakes)
+                        </li>
+                        <li>
+                            Mizutaki (chicken stew)
+                        </li>
+                    </ul>
+                </div>
+                <div id="nav2">
+                    <h2>Contact</h2>
+                    <ul>
+                        <li>
+                            Yoko's Kitchen
+                        </li>
+                        <li>
+                            27 Redchurch Street
+                        </li>
+                        <li>
+                            Shoreditch
+                        </li>
+                        <li>
+                            London E2 7DP
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>&copy; 2013 Yoko's Kitchen</p>
+        </div>
+    </div>
+</body>
+</html>

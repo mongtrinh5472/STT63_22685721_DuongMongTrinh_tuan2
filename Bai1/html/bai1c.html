@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 01c</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        #container {
+            width: 1700px;
+            height: 1000px;
+            border: 1px solid #c97979;
+        }
+        #header{
+            width: 100%;
+            height: 100px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            border-radius: 10px 10px 0 0;
+        }
+        #header h1{
+            color: #9f2c2d;
+            text-transform: uppercase;
+            font-style: italic;
+            text-shadow: 5px 10px 1px #e09898;
+        }
+        #menu_n{
+            width: 100%;
+            height: 50px;
+            line-height: 30px;
+            border: 1px solid black;
+            border-right: none;
+            border-left: none;
+            background-color: #c97979;
+            
+        }
+        #menu_n ul li{
+            display: inline-block;
+            margin-right: 10px;
+            width: 12%;
+            border-right: 3px solid rgb(160, 82, 212);
+            text-transform: uppercase;
+            text-align: center;
+            height: 40px;
+        }
+        #menu_n ul li a{
+            text-decoration: none;
+            color: white;
+            line-height: 50px;
+        }
+        #menu_n ul li:nth-child(1){
+            width: 400px;
+        }
+        #menu_n ul li:nth-child(5){
+            width: auto;
+            border-right: none;
+            margin-left: 40px;
+        }
+        #menu_n ul li.home-icon{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: end;
+
+        }
+        #menu_n ul li.home-icon img{
+            width: 20px;
+            height: 20px;
+        }
+        #main-content{
+            display: flex;
+            justify-content: space-around;
+            height: 750px;
+        }
+        #nav{
+            width: 20%;
+            height: 500px;
+            margin-top: 10px;
+        }
+        #nav ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        #nav ul li{
+            border: 1px solid #c97979;
+            border-radius: 15px;
+            background-color: #c97979;
+            color: white;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        #nav ul li:nth-child(6){
+            border: none;
+            background-color: transparent;
+            
+        }
+        #nav ul li img{
+            width: 100%;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow: 10px 10px 10px #c97979;
+        }
+        #section{
+            width: 55%;
+            height: auto;
+            display:block;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        #section2{
+            height: auto;
+        }
+        #section h1, #section2 h1, #section3 h1{
+            color: #9f2c2d;
+            background-color: #c97979;
+            width: 60%;
+            letter-spacing: 20px;
+            padding-left: 15px;
+        }
+        #section ul a, #section2 ul a{
+            color:red;
+            font-weight: bold;
+        }
+        #section ul li:nth-child(3){
+            color: #c4993f;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        #section ul li:nth-child(3)::marker{
+            color: black;
+        }
+        #section div:nth-child(2) a, #section2 div:nth-child(2) a{
+            color: red;
+            font-weight: bold;
+        }
+        #section2 ul li:nth-child(3), #section3 ul li:nth-child(3){
+            text-transform: none;
+            color: black;
+            font-weight: normal;
+        }
+        #section3{
+            height: auto;
+        }
+        #section3 ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        #section3 ul li{
+            margin-top: 10px;
+            
+        }
+        #section3 input, #section3 select{
+            width: 380px;
+            height: 40px;
+            margin-top: 10px;
+            border: 3px outset #dad7d7;
+            padding-left: 10px;
+            margin-left: 20px;
+        }
+        #section3 textarea{
+            width: 90%;
+            height: 80px;
+            margin-top: 10px;
+            border: 3px outset #dad7d7;
+            padding-left: 10px;
+            margin-left: 20px;
+        }
+        #section3 label input{
+            width: 15px;
+            height: 15px;
+        }
+        #section3 button{
+            width: 80px;
+            height: 40px;
+            margin-left: 20px;
+        }
+        #section3 button[type="cancel"]{
+            margin-left: 3px;
+            
+        }
+        #aside{
+            width: 25%;
+            height: 700px;
+            margin-top: 10px;
+            border: 1px solid #020202;
+            background-color: black;
+            color: white;
+        }
+        #aside ul li{
+            list-style-type: none;
+            width: 85%;
+            margin-left: 10px;
+        }
+        #aside ul li h2{
+            margin-top: 10px;
+        }
+        #aside ul li img{
+            width: 100%;
+            height: auto;
+        }
+        .more-content{
+            display: none;
+        }
+        #more:target{
+            display: block;
+        }
+        .more2-content{
+            display: none;
+        }
+        #more2:target{
+            display: block;
+        }
+        #aside ul li a{
+            color: rgb(206, 111, 185);
+            font-weight: bold;
+        }
+        #footer{
+            width: 100%;
+            height: 100px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            border-radius: 0 0 10px 10px;
+            background-color: #c97979;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Example Cafe Menu</h1>
+        </div>
+        <div id="menu_n">
+            <ul>
+                <li class="home-icon"><img src="/Tuan02/Bai1/img/icons8-home-50.png" alt=""></li>
+                <li><a href="#Starers">Starers</a></li>
+                <li><a href="#Main Course">Main Course</a></li>
+                <li><a href="#Desserts">Desserts</a></li>
+                <li>
+                    <input type="text">
+                    <button>Go</button>
+                </li>
+            </ul>
+        </div>
+
+        <div id="main-content">
+            <div id="nav">
+                <ul>
+                    <li>Cafe Latte</li>
+                    <li>Capuchino</li>
+                    <li>Ocean Blue</li>
+                    <li>Ice-cream Cafe</li>
+                    <li>Order Online</li>
+                    <li><img src="../img/company.png" alt=""></li>
+                </ul>
+            </div>
+            <div id="section">
+                <div>
+                    <h1>Starter</h1>
+                    <ul>
+                        <li>Chestnut and Mushroom Goujons <a href="#v">(v)</a></li>
+                        <li>Goat Cheese Salad <a href="#v">(v)</a></li>
+                        <li>Honey Soy Chicken Kebabs <a href="#v">(V)</a></li></li>
+                        <li>Seafood Salad <a href="#v">(v)</a></li></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="#Back to Top">Back to Top</a>
+                </div>
+                <div id="section2">
+                    <div>
+                        <h1>Desserts</h1>
+                        <ul>
+                            <li>Lemon Sorbet <a href="#v">(v)</a></li>
+                            <li>Chocolate Mud Pie <a href="#v">(v)</a></li>
+                            <li>Pecan Pie <a href="#v">(v)</a></li>
+                            <li>Selection of Fine Cheeses form Around the World <a href="#v">(v)</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="#Back to Top">Back to Top</a>
+                    </div>
+                </div>
+                <div id="section3">
+                    <h1>INFORMATION</h1>
+                    <ul>
+                        <li>
+                            <input type="text" name="fname" placeholder="First Name">
+                            <input type="text" name="lname" placeholder="Last Name">
+                        </li>
+                        <li>
+                            <input type="text" name="Email" placeholder="Email">
+                            <input type="text" name="Telephone" placeholder="Telephone">
+                        </li>
+                        <li>
+                            <select name="nationality" id="nationality">
+                                <option value="USA">USA</option>
+                                <option value="American">American</option>
+                                <option value="Japanese">Japanese</option>
+                                <option value="Korean">Korean</option>
+                                <option value="Vietnamese">Vietnamese</option>
+                            </select>
+                            <label>
+                                <input type="radio" name="languages" value="Vietnamese">
+                                Vietnamese
+                            </label>
+                            <label>
+                                <input type="radio" name="languages" value="Foreigner">
+                                Foreigner
+                            </label>
+                        </li>
+                        <li>
+                            <textarea name="comment" id="" placeholder="Comment"></textarea>
+                        </li>
+                        <li>
+                            <button type="submit">Submit</button>
+                            <button type="cancel">Cancel</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="aside">
+                <h1>Events</h1>
+                <ul>
+                    <li>
+                        <h2>Regular Meetings</h2>
+                    </li>
+                    <li>
+                        <img src="../img/meeting.png" alt="">
+                    </li>
+                    <li>
+                        Host your regular team meetings or activities in the comfort of your own private room.
+                        <a href="#more">Read more...</a>
+                        <div id="more" class="more-content">
+                            Charge up on Kith's aromatic coffee and delectable dishes for that extra boost in your work! 
+                            <a href="#">Compact</a>
+                        </div>
+                    </li>
+                    <li>
+                        <h2>Product Launches</h2>
+                    </li>
+                    <li>
+                        <img src="../img/launch.png" alt="">
+                    </li>
+                    <li>
+                        Launch your product with ease in a space that truly fits its image.
+                        <a href="#more2">Read more...</a>
+                        <div id="more2" class="more2-content">
+                            Create an unforgettable experience for your guests with our spacious outlets! Whether you want to host an intimate celebration or launch an event for hundreds of guests, Kith's space is customisable to your needs
+                            <a href="#">Compact</a>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div id="footer">
+            <h1>ABC Company &#169; - 12345678 - abccoffee@gmail.com</h1>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 01a</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        #container {
+            width: 900px;
+            height: 500px;
+            border: 1px solid black;
+        }
+        #header{
+            width: 100%;
+            height: 150px;
+            color: white;
+            text-align: center;
+            line-height: 150px;
+            border-radius: 10px 10px 0 0;
+        }
+        #header h1{
+            color: #9f2c2d;
+            text-transform: uppercase;
+            font-style: italic;
+            text-shadow: 20px 20px 10px #c97979;
+        }
+        #menu_n{
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid black;
+            border-right: none;
+            border-left: none;
+        }
+        #menu_n ul li{
+            display: inline-block;
+            margin-right: 10px;
+        }
+        #menu_n ul li a{
+            text-decoration: none;
+        }
+        #section, #section2{
+            width: 100%;
+            height: auto;
+        }
+        #section h2, #section2 h2{
+            color: #9f2c2d;
+            background-color: antiquewhite;
+        }
+        #section ul a, #section2 ul a{
+            color:red;
+            font-weight: bold;
+        }
+        #section ul li:nth-child(3){
+            color: #c4993f;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        #section ul li:nth-child(3)::marker{
+            color: black;
+        }
+        #section div:nth-child(2) a, #section2 div:nth-child(2) a{
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Example Cafe Menu</h1>
+        </div>
+        <div id="menu_n">
+            <ul>
+                <li><a href="#Starers">Starers</a></li>
+                <li><a href="#Main Course">Main Course</a></li>
+                <li><a href="#Desserts">Desserts</a></li>
+            </ul>
+        </div>
+
+        <div id="section">
+            <div>
+                <h2>Starters</h2>
+                <ul>
+                    <li>Chestnut and Mushroom Goujons <a href="#v">(v)</a></li>
+                    <li>Goat Cheese Salad <a href="#v">(v)</a></li>
+                    <li>Honey Soy Chicken Kebabs <a href="#v">(V)</a></li></li>
+                    <li>Seafood Salad <a href="#v">(v)</a></li></li>
+                </ul>
+            </div>
+            <div>
+                <a href="#Back to Top">Back to Top</a>
+            </div>
+        </div>
+        <div id="section2">
+            <div>
+                <h2><b>Desserts</b></h2>
+                <ul>
+                    <li>Lemon Sorbet <a href="#v">(v)</a></li>
+                    <li>Chocolate Mud Pie <a href="#v">(v)</a></li>
+                    <li>Pecan Pie <a href="#v">(v)</a></li>
+                    <li>Selection of Fine Cheeses form Around the World <a href="#v">(v)</a></li>
+                </ul>
+            </div>
+            <div>
+                <a href="#Back to Top">Back to Top</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
